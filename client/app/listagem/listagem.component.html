@@ -2,6 +2,7 @@
     <h1 class="text-center">Alurapic</h1>
 </div>
 <div class="container">
+    <p *ngIf="mensagem.length" class="alert alert-info">{{mensagem}}</p>
     <div class="row">
         <div class="col-md-12">
             <form>
@@ -20,9 +21,10 @@
     <!-- fim row -->
     <br>
     <div class="row">
-        <painel *ngFor="let foto of fotos | filtroPorTitulo:textoProcurado.value" titulo="{{foto.titulo | uppercase}}" class="col-md-2">
+        <painel *ngFor="let foto of fotos | filtroPorTitulo: textoProcurado.value" titulo="{{foto.titulo | uppercase}}" class="col-md-2">
             <foto titulo="{{foto.titulo}}" url="{{foto.url}}">
             </foto>
+            <button class="btn btn-danger btn-block" (click)="remove(foto)">Remover</button>
         </painel>
     </div>
 </div>

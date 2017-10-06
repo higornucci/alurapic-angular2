@@ -1,4 +1,6 @@
 <div class="container">
+    <h1 class="text-center">{{foto.titulo}}</h1>
+    <p *ngIf="mensagem.length" class="alert alert-info">{{mensagem}}</p>
     <form [formGroup]="meuForm" (submit)="cadastrar($event)" class="row">
         <div class="col-md-6">
             <div class="form-group">

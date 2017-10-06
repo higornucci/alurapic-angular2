@@ -9,10 +9,10 @@ import { ListagemComponent } from './listagem/listagem.component';
 import { RouterModule, Routes } from '@angular/router';
 import { HttpModule } from '@angular/http'
 import { routing } from './app.routes';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
-    imports: [BrowserModule, FotoModule, PainelModule, HttpModule, routing, FormsModule],
+    imports: [BrowserModule, FotoModule, PainelModule, HttpModule, routing, FormsModule, ReactiveFormsModule],
     declarations: [AppComponent, CadastroComponent, ListagemComponent],
     bootstrap: [AppComponent]
 })

@@ -10,9 +10,10 @@ import { RouterModule, Routes } from '@angular/router';
 import { HttpModule } from '@angular/http'
 import { routing } from './app.routes';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { BotaoModule } from './botao/botao.module';
 
 @NgModule({
-    imports: [BrowserModule, FotoModule, PainelModule, HttpModule, routing, FormsModule, ReactiveFormsModule],
+    imports: [BrowserModule, FotoModule, PainelModule, HttpModule, routing, FormsModule, ReactiveFormsModule, BotaoModule],
     declarations: [AppComponent, CadastroComponent, ListagemComponent],
     bootstrap: [AppComponent]
 })
